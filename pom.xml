@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.query</groupId>
+    <artifactId>processing</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.4.RELEASE</version>
+    </parent>
+
+    <!-- Additional lines to be added here... -->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.sf.jwordnet/jwnl -->
+<!-- 		<dependency>
+			<groupId>net.sf.jwordnet</groupId>
+			<artifactId>jwnl</artifactId>
+			<version>1.3.3</version>
+		</dependency>
+ -->
+		<dependency>
+		    <groupId>net.sf.jwordnet</groupId>
+		    <artifactId>jwnl</artifactId>
+		    <version>1.4_rc3</version>
+		</dependency>
+				
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-lang3</artifactId>
+		    <version>3.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.hp.hpl.jena/jena -->
+		<dependency>
+		    <groupId>com.hp.hpl.jena</groupId>
+		    <artifactId>jena</artifactId>
+		    <version>2.5.5</version>
+		</dependency>
+				
+<!-- https://mvnrepository.com/artifact/edu.stanford.protege/protege -->
+		<dependency>
+		    <groupId>edu.stanford.protege</groupId>
+		    <artifactId>protege</artifactId>
+		    <version>3.5.0</version>
+		</dependency>
+		
+		<dependency>
+        	<groupId>edu.stanford.smi.protege</groupId>
+        	<artifactId>protege-owl</artifactId>
+        	<version>1.0</version>
+        	<scope>system</scope>
+        	<systemPath>C:/Arun Kumar/NeonWorkSpace/processing/src/main/WEB-INF/lib/protege-owl.jar</systemPath>
+      </dependency>
+				
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+			      <execution>
+			        <goals>
+			          <goal>repackage</goal>
+			        </goals>
+			        <configuration>
+			          <mainClass>QueryController</mainClass>
+			        </configuration>
+			      </execution>
+			    </executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

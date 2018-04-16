@@ -1,0 +1,2556 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY address "http://gaia.fdi.ucm.es/ontologies/address.owl#" >
+    <!ENTITY calendar "http://gaia.fdi.ucm.es/ontologies/calendar.owl#" >
+    <!ENTITY protege "http://protege.stanford.edu/plugins/owl/protege#" >
+    <!ENTITY xsp "http://www.owl-ontologies.com/2005/08/07/xsp.owl#" >
+    <!ENTITY contact-details "http://gaia.fdi.ucm.es/ontologies/contact-details.owl#" >
+    <!ENTITY Rest "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#" >
+    <!ENTITY Rest4 "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#1" >
+    <!ENTITY Rest2 "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#3" >
+    <!ENTITY Rest3 "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#2" >
+    <!ENTITY Tito "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Tito&#39;" >
+    <!ENTITY Cafe_Mojo_Pub_ "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cafe_Mojo_Pub_&amp;" >
+    <!ENTITY s_Restaurant_ "http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Terry&#39;s_Restaurant_&amp;" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2010/6/Rest.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2010/6/Rest.owl"
+     xmlns:calendar="http://gaia.fdi.ucm.es/ontologies/calendar.owl#"
+     xmlns:address="http://gaia.fdi.ucm.es/ontologies/address.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Rest3="&Rest;2"
+     xmlns:Rest2="&Rest;3"
+     xmlns:Rest="http://www.semanticweb.org/ontologies/2010/6/Rest.owl#"
+     xmlns:Rest4="&Rest;1"
+     xmlns:Cafe_Mojo_Pub_="&Rest;Cafe_Mojo_Pub_&amp;"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:s_Restaurant_="&Rest;Terry&#39;s_Restaurant_&amp;"
+     xmlns:Tito="&Rest;Tito&#39;"
+     xmlns:contact-details="http://gaia.fdi.ucm.es/ontologies/contact-details.owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#atmospheres -->
+
+    <owl:ObjectProperty rdf:about="#atmospheres">
+        <rdfs:label rdf:datatype="&xsd;string">atmospheres</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating one or several atmosphere of the restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#Atmosphere"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#beverageChoice -->
+
+    <owl:ObjectProperty rdf:about="#beverageChoice">
+        <rdfs:label rdf:datatype="&xsd;string">beverageChoice</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the beverages available in a particular Meal</rdfs:comment>
+        <rdfs:range rdf:resource="#Beverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#beverages -->
+
+    <owl:ObjectProperty rdf:about="#beverages">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >list of beverages</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the beverages available in a particular Meal</rdfs:comment>
+        <rdfs:range rdf:resource="#Beverage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#caterings -->
+
+    <owl:ObjectProperty rdf:about="#caterings">
+        <rdfs:label rdf:datatype="&xsd;string">facilities</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the caterings available in a restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#Catering"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#closingPeriods -->
+
+    <owl:ObjectProperty rdf:about="#closingPeriods">
+        <rdfs:label rdf:datatype="&xsd;string">closingPeriods</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the closing period of a restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#DatePeriod"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#contact -->
+
+    <owl:ObjectProperty rdf:about="#contact">
+        <rdfs:label rdf:datatype="&xsd;string">contact</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating a contact</rdfs:comment>
+        <rdfs:range rdf:resource="#ContactDetails"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#days -->
+
+    <owl:ObjectProperty rdf:about="#days">
+        <rdfs:label rdf:datatype="&xsd;string">days</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the list of opening days in the concept OpeningPeriod</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;DayOfWeek"/>
+        <rdfs:domain rdf:resource="#OpeningPeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#desertOrCheeseChoice -->
+
+    <owl:ObjectProperty rdf:about="#desertOrCheeseChoice">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >desertOrCheeseChoice</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the choice of desert in a Meal</rdfs:comment>
+        <rdfs:range rdf:resource="#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#dishes -->
+
+    <owl:ObjectProperty rdf:about="#dishes">
+        <rdfs:label rdf:datatype="&xsd;string">dishes</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the list of dishes available in a restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#Dish"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#entertainment -->
+
+    <owl:ObjectProperty rdf:about="#entertainment">
+        <rdfs:label rdf:datatype="&xsd;string">entertainment</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the shows proposed by a restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#facilities -->
+
+    <owl:ObjectProperty rdf:about="#facilities">
+        <rdfs:label rdf:datatype="&xsd;string">facilities</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the facilities available in a restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#Facility"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#mainChoice -->
+
+    <owl:ObjectProperty rdf:about="#mainChoice">
+        <rdfs:label rdf:datatype="&xsd;string">mainChoice</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the choice of main plates for a Meal</rdfs:comment>
+        <rdfs:range rdf:resource="#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#meals -->
+
+    <owl:ObjectProperty rdf:about="#meals">
+        <rdfs:label rdf:datatype="&xsd;string">meals</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating a list of meals for a restaurant</rdfs:comment>
+        <rdfs:range rdf:resource="#Meal"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#openingPeriods -->
+
+    <owl:ObjectProperty rdf:about="#openingPeriods">
+        <rdfs:label rdf:datatype="&xsd;string">openingPeriods</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the opening days and opening hours in a week</rdfs:comment>
+        <rdfs:range rdf:resource="#OpeningPeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#periods -->
+
+    <owl:ObjectProperty rdf:about="#periods">
+        <rdfs:label rdf:datatype="&xsd;string">periods</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating a time-slot of periods</rdfs:comment>
+        <rdfs:domain rdf:resource="#OpeningPeriod"/>
+        <rdfs:range rdf:resource="#TimePeriod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ratings -->
+
+    <owl:ObjectProperty rdf:about="#ratings">
+        <rdfs:label rdf:datatype="&xsd;string">ratings</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating the ratings for something</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#region -->
+
+    <owl:ObjectProperty rdf:about="#region">
+        <rdfs:label rdf:datatype="&xsd;string">region</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the region of a wine</rdfs:comment>
+        <rdfs:domain rdf:resource="#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#reviews -->
+
+    <owl:ObjectProperty rdf:about="#reviews">
+        <rdfs:label rdf:datatype="&xsd;string">reviews</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+        <rdfs:range rdf:resource="#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#seating -->
+
+    <owl:ObjectProperty rdf:about="#seating">
+        <rdfs:label rdf:datatype="&xsd;string">seating</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the seating properties of the restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+        <rdfs:range rdf:resource="#RestaurantSeating"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#specialFeatures -->
+
+    <owl:ObjectProperty rdf:about="#specialFeatures">
+        <rdfs:label rdf:datatype="&xsd;string">specialFeatures</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the specific features available in a restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+        <rdfs:range rdf:resource="#SpecialFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#specialities -->
+
+    <owl:ObjectProperty rdf:about="#specialities">
+        <rdfs:label rdf:datatype="&xsd;string">specialities</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating the specialities proposed by a restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#specificEvents -->
+
+    <owl:ObjectProperty rdf:about="#specificEvents">
+        <rdfs:label rdf:datatype="&xsd;string">specificEvents</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the specific occasions handle by the restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#starterChoice -->
+
+    <owl:ObjectProperty rdf:about="#starterChoice">
+        <rdfs:label rdf:datatype="&xsd;string">starterChoice</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the choice of starters (Dish) for a Meal</rdfs:comment>
+        <rdfs:range rdf:resource="#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#typeOfCuisine -->
+
+    <owl:ObjectProperty rdf:about="#typeOfCuisine">
+        <rdfs:label rdf:datatype="&xsd;string">typeOfCuisine</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property for a restaurant to identify the type of cuisine</rdfs:comment>
+        <rdfs:range rdf:resource="#Cuisine"/>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#wineType -->
+
+    <owl:ObjectProperty rdf:about="#wineType">
+        <rdfs:label rdf:datatype="&xsd;string">wineType</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the tyoe of wine: red, white...</rdfs:comment>
+        <rdfs:domain rdf:resource="#Wine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#GMOFree -->
+
+    <owl:DatatypeProperty rdf:about="#GMOFree">
+        <rdfs:label rdf:datatype="&xsd;string">GMOFree</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating if a dish is spicy or not</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#address -->
+
+    <owl:DatatypeProperty rdf:about="#address"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#averageMealDuration -->
+
+    <owl:DatatypeProperty rdf:about="#averageMealDuration">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >averageMealDuration</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Estimation of the time of a meal</rdfs:comment>
+        <rdfs:domain rdf:resource="#Restaurant"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#capacity -->
+
+    <owl:DatatypeProperty rdf:about="#capacity">
+        <rdfs:label rdf:datatype="&xsd;string">capacity</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating a capacity</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#cardType -->
+
+    <owl:DatatypeProperty rdf:about="#cardType">
+        <rdfs:label rdf:datatype="&xsd;string">cardType</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the type of payment card</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#category -->
+
+    <owl:DatatypeProperty rdf:about="#category">
+        <rdfs:label rdf:datatype="&xsd;string">category</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property for category</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#chiefNames -->
+
+    <owl:DatatypeProperty rdf:about="#chiefNames">
+        <rdfs:label rdf:datatype="&xsd;string">chiefNames</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the name of the chiefs for a gastronomic cuisine</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#country -->
+
+    <owl:DatatypeProperty rdf:about="#country">
+        <rdfs:label rdf:datatype="&xsd;string">country</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >give the name of a country</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#cuisine -->
+
+    <owl:DatatypeProperty rdf:about="#cuisine">
+        <rdfs:domain rdf:resource="#Cuisine"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#deliveryArea -->
+
+    <owl:DatatypeProperty rdf:about="#deliveryArea">
+        <rdfs:label rdf:datatype="&xsd;string">deliveryArea</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the area for the delivery in the case of a home delivery facility</rdfs:comment>
+        <rdfs:domain rdf:resource="#HomeDelivery"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#deliveryDelay -->
+
+    <owl:DatatypeProperty rdf:about="#deliveryDelay">
+        <rdfs:label rdf:datatype="&xsd;string">deliveryDelay</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the delay for the delivery in the case of a home delivery facility</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Duration"/>
+        <rdfs:domain rdf:resource="#HomeDelivery"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#description -->
+
+    <owl:DatatypeProperty rdf:about="#description">
+        <rdfs:label rdf:datatype="&xsd;string">description</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property or adding a description to any objects</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#discountPercentage -->
+
+    <owl:DatatypeProperty rdf:about="#discountPercentage">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >discountPercentage</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property for a take awayfacility indicating the discount percentage offer when people take away their food</rdfs:comment>
+        <rdfs:domain rdf:resource="#TakeAwayFacility"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#dishType -->
+
+    <owl:DatatypeProperty rdf:about="#dishType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#driveIn -->
+
+    <owl:DatatypeProperty rdf:about="#driveIn">
+        <rdfs:label rdf:datatype="&xsd;string">driveIn</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating if there is a driveIn for the take-away facility</rdfs:comment>
+        <rdfs:domain rdf:resource="#TakeAwayFacility"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#endPeriodDate -->
+
+    <owl:DatatypeProperty rdf:about="#endPeriodDate">
+        <rdfs:label rdf:datatype="&xsd;string">endPeriodDate</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the end date for a period</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Date"/>
+        <rdfs:domain rdf:resource="#DatePeriod"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#lastHourPurchase -->
+
+    <owl:DatatypeProperty rdf:about="#lastHourPurchase">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >lastHourPurchase</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the last hour to purchase something from a restaurant having a HomeDeliveryFacility</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Time"/>
+        <rdfs:domain rdf:resource="#HomeDelivery"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="#name">
+        <rdfs:label rdf:datatype="&xsd;string">name</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property for name</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#numberOfPeople -->
+
+    <owl:DatatypeProperty rdf:about="#numberOfPeople">
+        <rdfs:label rdf:datatype="&xsd;string">numberOfPeople</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating a number of people</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;NonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#onLineOrder -->
+
+    <owl:DatatypeProperty rdf:about="#onLineOrder">
+        <rdfs:label rdf:datatype="&xsd;string">onLineOrder</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >boolean indicating if the HomeDeliveryFacility has the possibility of on-line order</rdfs:comment>
+        <rdfs:domain rdf:resource="#HomeDelivery"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#onLinePayment -->
+
+    <owl:DatatypeProperty rdf:about="#onLinePayment">
+        <rdfs:label rdf:datatype="&xsd;string">onLinePayment</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating if an on-line payment is possible for the HomeDeliveryFacility of a restaurant</rdfs:comment>
+        <rdfs:domain rdf:resource="#HomeDelivery"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#price -->
+
+    <owl:DatatypeProperty rdf:about="#price">
+        <rdfs:label rdf:datatype="&xsd;string">price</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property indicating a price</rdfs:comment>
+        <rdfs:range rdf:resource="#Price"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#priceByGlass -->
+
+    <owl:DatatypeProperty rdf:about="#priceByGlass">
+        <rdfs:label rdf:datatype="&xsd;string">priceByGlass</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the price of a glass of wine</rdfs:comment>
+        <rdfs:range rdf:resource="#Price"/>
+        <rdfs:domain rdf:resource="#Wine"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#size -->
+
+    <owl:DatatypeProperty rdf:about="#size">
+        <rdfs:label rdf:datatype="&xsd;string">category</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property for the size for beverages in ml</rdfs:comment>
+        <rdfs:domain rdf:resource="#Beverage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#spicy -->
+
+    <owl:DatatypeProperty rdf:about="#spicy">
+        <rdfs:label rdf:datatype="&xsd;string">spicy</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating if a dish is spicy or not</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#startHour -->
+
+    <owl:DatatypeProperty rdf:about="#startHour">
+        <rdfs:label rdf:datatype="&xsd;string">startHour</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the start time for the time-slot of TimePeriod</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Time"/>
+        <rdfs:domain rdf:resource="#TimePeriod"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#startPeriodDate -->
+
+    <owl:DatatypeProperty rdf:about="#startPeriodDate">
+        <rdfs:label rdf:datatype="&xsd;string">startPeriodDate</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating the start-date of the period</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Date"/>
+        <rdfs:domain rdf:resource="#DatePeriod"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#stationName -->
+
+    <owl:DatatypeProperty rdf:about="#stationName">
+        <rdfs:label rdf:datatype="&xsd;string">stationName</rdfs:label>
+        <rdfs:domain rdf:resource="#MetroFacility"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#stopHour -->
+
+    <owl:DatatypeProperty rdf:about="#stopHour">
+        <rdfs:label rdf:datatype="&xsd;string">stopHour</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating stop time for the time-slot of TimePeriod</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Time"/>
+        <rdfs:domain rdf:resource="#TimePeriod"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#type -->
+
+    <owl:DatatypeProperty rdf:about="#type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#vegetarian -->
+
+    <owl:DatatypeProperty rdf:about="#vegetarian">
+        <rdfs:label rdf:datatype="&xsd;string">vegetarian</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >property indicating if a dish is vegetarian or not</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#year -->
+
+    <owl:DatatypeProperty rdf:about="#year">
+        <rdfs:label rdf:datatype="&xsd;string">year</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >generic property for year</rdfs:comment>
+        <rdfs:range rdf:resource="&calendar;Year"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://gaia.fdi.ucm.es/ontologies/calendar.owl#Date -->
+
+    <owl:Class rdf:about="&calendar;Date"/>
+    
+
+
+    <!-- http://gaia.fdi.ucm.es/ontologies/calendar.owl#DayOfWeek -->
+
+    <owl:Class rdf:about="&calendar;DayOfWeek"/>
+    
+
+
+    <!-- http://gaia.fdi.ucm.es/ontologies/calendar.owl#Duration -->
+
+    <owl:Class rdf:about="&calendar;Duration"/>
+    
+
+
+    <!-- http://gaia.fdi.ucm.es/ontologies/calendar.owl#Time -->
+
+    <owl:Class rdf:about="&calendar;Time"/>
+    
+
+
+    <!-- http://gaia.fdi.ucm.es/ontologies/calendar.owl#Year -->
+
+    <owl:Class rdf:about="&calendar;Year"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#1_Type -->
+
+    <owl:Class rdf:about="#1_Type">
+        <rdfs:subClassOf rdf:resource="#Question"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;string"
+            >What do you like to have ?</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#2_Dish -->
+
+    <owl:Class rdf:about="#2_Dish">
+        <rdfs:subClassOf rdf:resource="#Question"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;string"
+            >What type of food, do you like ?</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#3_Cuisine -->
+
+    <owl:Class rdf:about="#3_Cuisine">
+        <rdfs:subClassOf rdf:resource="#Question"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;string"
+            >What type of cuision do you like ?</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ALaCarte -->
+
+    <owl:Class rdf:about="#ALaCarte">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >HomeDeliveryFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Catering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#AccessFacility -->
+
+    <owl:Class rdf:about="#AccessFacility">
+        <rdfs:label rdf:datatype="&xsd;string">AccessFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can be closed to a metro station, taxi station or any other transport facilities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#AirConditioning -->
+
+    <owl:Class rdf:about="#AirConditioning">
+        <rdfs:subClassOf rdf:resource="#RestaurantSeating"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >could be convention or meeting party</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#AllDayDining -->
+
+    <owl:Class rdf:about="#AllDayDining">
+        <rdfs:subClassOf rdf:resource="#SpecialFeature"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#AsianCuisine -->
+
+    <owl:Class rdf:about="#AsianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Atmosphere -->
+
+    <owl:Class rdf:about="#Atmosphere">
+        <rdfs:label rdf:datatype="&xsd;string">Atmosphere</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This concept has some categories used to identify the atmosphere of a particular restaurant.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BabyChair -->
+
+    <owl:Class rdf:about="#BabyChair">
+        <rdfs:label rdf:datatype="&xsd;string">BabyChair</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChildrenAndBabyFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can provide Baby chairs</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BabyLaundry -->
+
+    <owl:Class rdf:about="#BabyLaundry">
+        <rdfs:label rdf:datatype="&xsd;string">BabyLaundry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChildrenAndBabyFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can provide a baby laundry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BabySitter -->
+
+    <owl:Class rdf:about="#BabySitter">
+        <rdfs:label rdf:datatype="&xsd;string">BabySitter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChildrenAndBabyFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can provide a baby sitter</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Bangalore -->
+
+    <owl:Class rdf:about="#Bangalore">
+        <rdfs:subClassOf rdf:resource="#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BarbecueCuisine -->
+
+    <owl:Class rdf:about="#BarbecueCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Beer -->
+
+    <owl:Class rdf:about="#Beer">
+        <rdfs:label rdf:datatype="&xsd;string">Beer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Beverage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#country"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#category"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The concept of beer is decribed by the name of the beer, its price (could be the glass price or the bottle price), its category (white, brown...) and a description giving information about the origin of the beer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Beverage -->
+
+    <owl:Class rdf:about="#Beverage">
+        <rdfs:label rdf:datatype="&xsd;string">Beverage</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#price"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#size"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BirthdayParty -->
+
+    <owl:Class rdf:about="#BirthdayParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BrailleMenu -->
+
+    <owl:Class rdf:about="#BrailleMenu">
+        <rdfs:label rdf:datatype="&xsd;string">Elevator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DisabledFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can a brailleMenu facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BrasserieCuisine -->
+
+    <owl:Class rdf:about="#BrasserieCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BreakfastBrunch -->
+
+    <owl:Class rdf:about="#BreakfastBrunch">
+        <rdfs:subClassOf rdf:resource="#SpecialFeature"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BusinessAndCasualAtmosphere -->
+
+    <owl:Class rdf:about="#BusinessAndCasualAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BusinessBreakfast -->
+
+    <owl:Class rdf:about="#BusinessBreakfast">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >BusinessBreakfast</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BusinessFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;A restaurant can propose business breakfast</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BusinessDining -->
+
+    <owl:Class rdf:about="#BusinessDining">
+        <rdfs:subClassOf rdf:resource="#BusinessFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can propose business dining</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BusinessFacility -->
+
+    <owl:Class rdf:about="#BusinessFacility">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >BusinessFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;A restaurant  can offer particular business restaurant facilities such as business lunch, breakfast</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#BusinessLunch -->
+
+    <owl:Class rdf:about="#BusinessLunch">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >BusinessFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BusinessFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;A restaurant can propose business lunch</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#CBAccepted -->
+
+    <owl:Class rdf:about="#CBAccepted">
+        <rdfs:label rdf:datatype="&xsd;string">CBAccepted</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PaymentFacility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#cardType"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer CB accepted payement facility: see to introduce type of card or list of predefined instance of payment card</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cafes -->
+
+    <owl:Class rdf:about="#Cafes">
+        <rdfs:subClassOf rdf:resource="#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#CasualAtmosphere -->
+
+    <owl:Class rdf:about="#CasualAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Catering -->
+
+    <owl:Class rdf:about="#Catering">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >RestaurantFacility</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Concept of RestaurantFacility identifies facility offer by a restaurant. This class is an abstract class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Chennai -->
+
+    <owl:Class rdf:about="#Chennai">
+        <rdfs:subClassOf rdf:resource="#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ChildrenAndBabyFacility -->
+
+    <owl:Class rdf:about="#ChildrenAndBabyFacility">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >ChildrenAndBabyFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can offer some categories of Children and baby facilities.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ChildrenGameArea -->
+
+    <owl:Class rdf:about="#ChildrenGameArea">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >ChildrenGameArea</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChildrenAndBabyFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can provide games for children</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ChildrenMeal -->
+
+    <owl:Class rdf:about="#ChildrenMeal">
+        <rdfs:label rdf:datatype="&xsd;string">ChildrenMeal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ChildrenAndBabyFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can provide Children meal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ChristmasParty -->
+
+    <owl:Class rdf:about="#ChristmasParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#CocktailParty -->
+
+    <owl:Class rdf:about="#CocktailParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#CoffeShopCuisine -->
+
+    <owl:Class rdf:about="#CoffeShopCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ContactDetails -->
+
+    <owl:Class rdf:about="#ContactDetails"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ConventionParty -->
+
+    <owl:Class rdf:about="#ConventionParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >could be convention or meeting party</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cuisine -->
+
+    <owl:Class rdf:about="#Cuisine">
+        <rdfs:label rdf:datatype="&xsd;string">Cuisine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >The concept cuisine is an abstract concept. all individuals of this concept are first described by a description of the origin and particularities of this cuisine.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#DanceFloor -->
+
+    <owl:Class rdf:about="#DanceFloor">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#DatePeriod -->
+
+    <owl:Class rdf:about="#DatePeriod">
+        <rdfs:label rdf:datatype="&xsd;string">DatePeriod</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#endPeriodDate"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#startPeriodDate"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A period is set of days determined by a startPeriodDate and a endPeriodDate</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Dining -->
+
+    <owl:Class rdf:about="#Dining">
+        <rdfs:subClassOf rdf:resource="#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#DisabledFacility -->
+
+    <owl:Class rdf:about="#DisabledFacility">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >DisabledFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer some categories of Disabled facility such as  wheel chair access, elevator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Dish -->
+
+    <owl:Class rdf:about="#Dish">
+        <rdfs:label rdf:datatype="&xsd;string">Dish</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#vegetarian"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#GMOFree"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#numberOfPeople"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#price"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#spicy"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A dish is described by a category(starter, fish, meat, pizza, cheese, desert), a name, a description, a price and some particularities such as spicy dish.</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="&xsd;string"
+            >What type of food, do you like ?</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Elevator -->
+
+    <owl:Class rdf:about="#Elevator">
+        <rdfs:label rdf:datatype="&xsd;string">Elevator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DisabledFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer some generic instance of the Disabled concept such as  wheel chair access, elevator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Facility -->
+
+    <owl:Class rdf:about="#Facility">
+        <rdfs:label rdf:datatype="&xsd;string">Facility</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Concept of Facility for any establishement. This class is an abstract class</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#FamilialAtmosphere -->
+
+    <owl:Class rdf:about="#FamilialAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#FastFoodCuisine -->
+
+    <owl:Class rdf:about="#FastFoodCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#FineDiningAtmosphere -->
+
+    <owl:Class rdf:about="#FineDiningAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#GayAndLesbianAtmosphere -->
+
+    <owl:Class rdf:about="#GayAndLesbianAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Goa -->
+
+    <owl:Class rdf:about="#Goa">
+        <rdfs:subClassOf rdf:resource="#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#HomeDelivery -->
+
+    <owl:Class rdf:about="#HomeDelivery">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >HomeDeliveryFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Catering"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#deliveryDelay"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#onLineOrder"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#onLinePayment"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#lastHourPurchase"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#deliveryArea"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Facility proposed by a restaurant for home delivery. Each restaurant having this facility must described a particular instance of this catering such as last hour purchase information, delivery delay of the restaurant, possibilities of on-line order and on-line payment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#IndianCuisine -->
+
+    <owl:Class rdf:about="#IndianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#IndoorParking -->
+
+    <owl:Class rdf:about="#IndoorParking">
+        <rdfs:label rdf:datatype="&xsd;string">ParkingIndoor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ParkingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#IndoorSeating -->
+
+    <owl:Class rdf:about="#IndoorSeating">
+        <rdfs:subClassOf rdf:resource="#RestaurantSeating"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#InternationalCuisine -->
+
+    <owl:Class rdf:about="#InternationalCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ItalianCuisine -->
+
+    <owl:Class rdf:about="#ItalianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#JapaneseCuisine -->
+
+    <owl:Class rdf:about="#JapaneseCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Meal -->
+
+    <owl:Class rdf:about="#Meal">
+        <rdfs:label rdf:datatype="&xsd;string">Meal</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#desertOrCheeseChoice"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#mainChoice"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#beverageChoice"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#numberOfPeople"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#starterChoice"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#price"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This class is an abstract class. Each type of Meal is a subClass of this Concept.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#MetroFacility -->
+
+    <owl:Class rdf:about="#MetroFacility">
+        <rdfs:label rdf:datatype="&xsd;string">MetroFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AccessFacility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#stationName"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Mumbai -->
+
+    <owl:Class rdf:about="#Mumbai">
+        <rdfs:subClassOf rdf:resource="#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#NewYearEveningParty -->
+
+    <owl:Class rdf:about="#NewYearEveningParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#NoSmoking -->
+
+    <owl:Class rdf:about="#NoSmoking">
+        <rdfs:label rdf:datatype="&xsd;string">NoSmoking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SmokingFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >no-smoking facility for smoking facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Non-VegetarianDish -->
+
+    <owl:Class rdf:about="#Non-VegetarianDish">
+        <rdfs:subClassOf rdf:resource="#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#NorthIndianCuisine -->
+
+    <owl:Class rdf:about="#NorthIndianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OfficeParty -->
+
+    <owl:Class rdf:about="#OfficeParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OnlyDogAccepted -->
+
+    <owl:Class rdf:about="#OnlyDogAccepted">
+        <rdfs:label rdf:datatype="&xsd;string">OnlyDogAccepted</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PetFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can offer an only dog accepted pet facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OpeningPeriod -->
+
+    <owl:Class rdf:about="#OpeningPeriod">
+        <rdfs:label rdf:datatype="&xsd;string">OpeningPeriod</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#days"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#periods"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This concept summarizes the list of days which have the same opening hours</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OutdoorParking -->
+
+    <owl:Class rdf:about="#OutdoorParking">
+        <rdfs:label rdf:datatype="&xsd;string">ParkingOutdoor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ParkingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OutdoorSeatingInGarden -->
+
+    <owl:Class rdf:about="#OutdoorSeatingInGarden">
+        <rdfs:subClassOf rdf:resource="#RestaurantSeating"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OutdoorSeatingOnPavement -->
+
+    <owl:Class rdf:about="#OutdoorSeatingOnPavement">
+        <rdfs:subClassOf rdf:resource="#RestaurantSeating"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#OutdoorSeatingOnTerrace -->
+
+    <owl:Class rdf:about="#OutdoorSeatingOnTerrace">
+        <rdfs:subClassOf rdf:resource="#RestaurantSeating"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ParkingFacility -->
+
+    <owl:Class rdf:about="#ParkingFacility">
+        <rdfs:label rdf:datatype="&xsd;string">ParkingFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PaymentFacility -->
+
+    <owl:Class rdf:about="#PaymentFacility">
+        <rdfs:label rdf:datatype="&xsd;string">PaymentFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer particular payment facilities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PetAccepted -->
+
+    <owl:Class rdf:about="#PetAccepted">
+        <rdfs:label rdf:datatype="&xsd;string">PetAccepted</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PetFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can offer a pet accepted pet facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PetFacility -->
+
+    <owl:Class rdf:about="#PetFacility">
+        <rdfs:label rdf:datatype="&xsd;string">PetFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can offer some categories of PetFacility concept such as Pet-accepted, pet-refused, only-dog-accepted.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PetFood -->
+
+    <owl:Class rdf:about="#PetFood">
+        <rdfs:label rdf:datatype="&xsd;string">PetFood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PetFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can have a pet food facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PetNursery -->
+
+    <owl:Class rdf:about="#PetNursery">
+        <rdfs:label rdf:datatype="&xsd;string">PetRefused</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PetFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can have a pet nursery</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PetRefused -->
+
+    <owl:Class rdf:about="#PetRefused">
+        <rdfs:label rdf:datatype="&xsd;string">PetRefused</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PetFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >An establishment can refused pet as pet facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Place -->
+
+    <owl:Class rdf:about="#Place"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Price -->
+
+    <owl:Class rdf:about="#Price"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PrivateParking -->
+
+    <owl:Class rdf:about="#PrivateParking">
+        <rdfs:label rdf:datatype="&xsd;string">PrivateParking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ParkingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PrivateSpace -->
+
+    <owl:Class rdf:about="#PrivateSpace">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Pub -->
+
+    <owl:Class rdf:about="#Pub">
+        <rdfs:subClassOf rdf:resource="#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#PublicParking -->
+
+    <owl:Class rdf:about="#PublicParking">
+        <rdfs:label rdf:datatype="&xsd;string">PublicParking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ParkingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Question -->
+
+    <owl:Class rdf:about="#Question"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Rating -->
+
+    <owl:Class rdf:about="#Rating">
+        <rdfs:label rdf:datatype="&xsd;string">Rating</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >must be part of another ontology TO BE REMOVED</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#RelaxedAtmosphere -->
+
+    <owl:Class rdf:about="#RelaxedAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Restaurant -->
+
+    <owl:Class rdf:about="#Restaurant">
+        <rdfs:label rdf:datatype="&xsd;string">Restaurant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ratings"/>
+                <owl:allValuesFrom rdf:resource="#Rating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#reviews"/>
+                <owl:allValuesFrom rdf:resource="#Review"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#caterings"/>
+                <owl:allValuesFrom rdf:resource="#Catering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#capacity"/>
+                <owl:allValuesFrom rdf:resource="&xsd;NonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#facilities"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#seating"/>
+                <owl:allValuesFrom rdf:resource="#RestaurantSeating"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialFeatures"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#meals"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specialities"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#averageMealDuration"/>
+                <owl:allValuesFrom rdf:resource="&calendar;Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#openingPeriods"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#beverages"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#atmospheres"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#closingPeriods"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#typeOfCuisine"/>
+                <owl:allValuesFrom rdf:resource="#Cuisine"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#contact"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#entertainment"/>
+                <owl:allValuesFrom rdf:resource="#Show"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dishes"/>
+                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#specificEvents"/>
+                <owl:allValuesFrom rdf:resource="#RestaurantGroupParty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >the concept of restaurant is described by several sets of attributes:
+		- name, contact and address socially identify the restaurant
+		- closingPeriods, days-and-opening-hours identify opening periods of the restaurant
+		- everage-meal-duration is giving an information for the customer if he/she has some time constraints
+		- specific-occasions, atmospheres, entertainment, particularities are attributes to help the customer to choose a restuarant according to his/her motivations
+		- dishes, meals, beverages,typeOfCuisine can help to choose a restuarant according to the cuisine or some particular dishes, or some particular meals and their prices
+		- ratings represent the notation of the restuarant by professionals or people</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#RestaurantGroupParty -->
+
+    <owl:Class rdf:about="#RestaurantGroupParty">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >RestaurantGroupParty</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This concept has some categories used to identify the specific occasions managed by the restaurant such as wedding party, new-year evening party etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#RestaurantSeating -->
+
+    <owl:Class rdf:about="#RestaurantSeating">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >RestaurantSeating</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This concept identify the different possibilities of seating for a restaurant. it&#39;s an abstract concept</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Review -->
+
+    <owl:Class rdf:about="#Review">
+        <rdfs:label rdf:datatype="&xsd;string">Review</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#RomanticAtmosphere -->
+
+    <owl:Class rdf:about="#RomanticAtmosphere">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SeafoodCuisine -->
+
+    <owl:Class rdf:about="#SeafoodCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SelfService -->
+
+    <owl:Class rdf:about="#SelfService">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >HomeDeliveryFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Catering"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SemiPrivateSpace -->
+
+    <owl:Class rdf:about="#SemiPrivateSpace">
+        <rdfs:subClassOf rdf:resource="#Atmosphere"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Show -->
+
+    <owl:Class rdf:about="#Show">
+        <rdfs:label rdf:datatype="&xsd;string">Show</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Smoking -->
+
+    <owl:Class rdf:about="#Smoking">
+        <rdfs:label rdf:datatype="&xsd;string">Smoking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SmokingFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >no-smoking facility for smoking facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SmokingArea -->
+
+    <owl:Class rdf:about="#SmokingArea">
+        <rdfs:label rdf:datatype="&xsd;string">SmokingArea</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SmokingFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can offer a smoking area facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SmokingFacility -->
+
+    <owl:Class rdf:about="#SmokingFacility">
+        <rdfs:label rdf:datatype="&xsd;string">SmokingFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Facility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can offer some categories of SmokingFacilities such as smoking area, smoking room etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SmokingRoom -->
+
+    <owl:Class rdf:about="#SmokingRoom">
+        <rdfs:label rdf:datatype="&xsd;string">SmokingRoom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SmokingFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A restaurant can offer a smoking room facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SouthIndianCuisine -->
+
+    <owl:Class rdf:about="#SouthIndianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#SpecialFeature -->
+
+    <owl:Class rdf:about="#SpecialFeature">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >RestaurantSpecificFeatures</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This concept has some categories used to identify the specific features proposed by the restaurant such as dancing, biological products etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#TakeAwayFacility -->
+
+    <owl:Class rdf:about="#TakeAwayFacility">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >TakeAwayFacility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Catering"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#discountPercentage"/>
+                <owl:allValuesFrom rdf:resource="&xsd;decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#driveIn"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Facility proposed by a restaurant to take away food. For each restaurant an instance of this facility identifies the discount percentage gievn by the restaurant to take away food and also indicates the possibility of taking away food by car.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#TimePeriod -->
+
+    <owl:Class rdf:about="#TimePeriod">
+        <rdfs:label rdf:datatype="&xsd;string">TimePeriod</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#stopHour"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#startHour"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >This class allows to describe a time slot.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Type -->
+
+    <owl:Class rdf:about="#Type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#ValetParking -->
+
+    <owl:Class rdf:about="#ValetParking">
+        <rdfs:label rdf:datatype="&xsd;string">ValetParking</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ParkingFacility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#VegetarianCuisine -->
+
+    <owl:Class rdf:about="#VegetarianCuisine">
+        <rdfs:subClassOf rdf:resource="#Cuisine"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#VegetarianDish -->
+
+    <owl:Class rdf:about="#VegetarianDish">
+        <rdfs:subClassOf rdf:resource="#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#WeddingParty -->
+
+    <owl:Class rdf:about="#WeddingParty">
+        <rdfs:subClassOf rdf:resource="#RestaurantGroupParty"/>
+        <rdfs:comment rdf:datatype="&xsd;string"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#WheelChairAccess -->
+
+    <owl:Class rdf:about="#WheelChairAccess">
+        <rdfs:label rdf:datatype="&xsd;string"
+            >WheelChairAccess</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DisabledFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer some generic instance of the Disabled concept such as  wheel chair access, elevator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#WheelChairToilet -->
+
+    <owl:Class rdf:about="#WheelChairToilet">
+        <rdfs:label rdf:datatype="&xsd;string">Elevator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DisabledFacility"/>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >&gt;An establishement can offer a wheelChairToilet facility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Wine -->
+
+    <owl:Class rdf:about="#Wine">
+        <rdfs:label rdf:datatype="&xsd;string">Wine</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Beverage"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#year"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#priceByGlass"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#region"/>
+                <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >A wine is defined by its name, its category, its year, the bottle price or/and the priceByGlass and aslo some ratings about this wine</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Artjuna -->
+
+    <Goa rdf:about="#Artjuna">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">7AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">7PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >940, Market Rd, Monteiro Vaddo, Anjuna, Goa 403509</address>
+        <type rdf:datatype="&xsd;string">cafes</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Bombay_Coffee_Roasters -->
+
+    <Goa rdf:about="#Bombay_Coffee_Roasters">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">8AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">8PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >Rua 31 de Janeiro, Altinho, Panaji, Goa 403001</address>
+        <type rdf:datatype="&xsd;string">cafes</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Burma_Burma -->
+
+    <Mumbai rdf:about="#Burma_Burma">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">11.30PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >Kothari House, Allana Centre Lane, Opposite Mumbai University, Fort (Kalaghoda), Mumbai</address>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <dishType rdf:datatype="&xsd;string">non-veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">northindian</cuisine>
+        <cuisine rdf:datatype="&xsd;string">south indian</cuisine>
+    </Mumbai>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#By_the_Mekong -->
+
+    <owl:Thing rdf:about="#By_the_Mekong">
+        <rdf:type rdf:resource="#Mumbai"/>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">2.00AM</stopHour>
+        <dishType rdf:datatype="&xsd;string">Non-Veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">Northindian</cuisine>
+        <address rdf:datatype="&xsd;string"
+            >The St. Regis Mumbai, 462, Senapati Bapat Marg, Lower Parel, Mumbai, Maharashtra 400013</address>
+        <type rdf:datatype="&xsd;string">dining</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cafe_Bodega -->
+
+    <owl:Thing rdf:about="#Cafe_Bodega">
+        <rdf:type rdf:resource="#Goa"/>
+        <startHour rdf:datatype="&xsd;string">10AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">10PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >63/C-8, Sunaparanta Centre For The Arts, Near Lar De Estudantes, Altinho, Panaji, Goa 403001</address>
+        <type rdf:datatype="&xsd;string">cafes</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cafe_Chocolatti -->
+
+    <owl:Thing rdf:about="#Cafe_Chocolatti">
+        <rdf:type rdf:resource="#Goa"/>
+        <address rdf:datatype="&xsd;string"
+            >409A, Fort Aguada Rd, Candolim, Bardez, Goa 403515</address>
+        <stopHour rdf:datatype="&xsd;string">7PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">9AM</startHour>
+        <type rdf:datatype="&xsd;string">cafes</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cafe_Mojo_Pub_&amp;_Bistro -->
+
+    <Goa rdf:about="#Cafe_Mojo_Pub_&amp;_Bistro">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <stopHour rdf:datatype="&xsd;string">5AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">7PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >A/6, Skylark Apartments, M. B. Road, Ozari, Panaji, Goa 403001</address>
+        <type rdf:datatype="&xsd;string">pub</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Cape_Town_Cafe -->
+
+    <Goa rdf:about="#Cape_Town_Cafe">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <stopHour rdf:datatype="&xsd;string">4AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">8PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Tito&#39;s Lane, Baga Calangute Rd, Saunta Vaddo, Bardez, Goa 403516</address>
+        <type rdf:datatype="&xsd;string">pub</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Celini -->
+
+    <Mumbai rdf:about="#Celini">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">12AM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >BKC Vicinity, Off Western Express Highway, Santacruz East, Mumbai, Maharashtra 400055</address>
+        <cuisine rdf:datatype="&xsd;string">ItalianCuisine</cuisine>
+        <dishType rdf:datatype="&xsd;string">Non-veg</dishType>
+        <type rdf:datatype="&xsd;string">dining</type>
+    </Mumbai>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Copperleaf_Restaurant -->
+
+    <Goa rdf:about="#Copperleaf_Restaurant">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">12.00AM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >Chogm Rd, SBI Colony, Porvorim, Alto Porvorim, Pilerne, Goa 403521</address>
+        <dishType rdf:datatype="&xsd;string">Vegetarian</dishType>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">indian</cuisine>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Earthen_Oven -->
+
+    <owl:Thing rdf:about="#Earthen_Oven">
+        <rdf:type rdf:resource="#Goa"/>
+        <address rdf:datatype="&xsd;string"
+            > Acron Place,283, Fort Aguada Road, Candolim, Goa 403516</address>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">12.00AM</stopHour>
+        <dishType rdf:datatype="&xsd;string">Non-veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">Seafood</cuisine>
+        <type rdf:datatype="&xsd;string">dining</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Fifty_Five_East_Restaurant -->
+
+    <Mumbai rdf:about="#Fifty_Five_East_Restaurant">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <startHour rdf:datatype="&xsd;string">11.00AM</startHour>
+        <stopHour rdf:datatype="&xsd;string">11.30PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >Grand Hyatt, Off, Western Express Hwy, Santacruz East, Mumbai, Maharashtra 400055</address>
+        <dishType rdf:datatype="&xsd;string">Non-veg</dishType>
+        <dishType rdf:datatype="&xsd;string">Veg</dishType>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">northindian</cuisine>
+    </Mumbai>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Indigo -->
+
+    <owl:Thing rdf:about="#Indigo">
+        <rdf:type rdf:resource="#Mumbai"/>
+        <stopHour rdf:datatype="&xsd;string">11.00PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">11.30AM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >4, Mandlik Rd, Colaba, Behind Taj Mahal Hotel, Mumbai, Maharashtra 400001</address>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">italian</cuisine>
+        <dishType rdf:datatype="&xsd;string">veg</dishType>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Mahesh_Lunch_Home_Fort_Seafood_Restaurant -->
+
+    <Mumbai rdf:about="#Mahesh_Lunch_Home_Fort_Seafood_Restaurant">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <stopHour rdf:datatype="&xsd;string">11.00PM</stopHour>
+        <address rdf:datatype="&xsd;string"
+            >8-B, Cawasji Patel Street, Fort, Mumbai, Maharashtra 400001</address>
+        <startHour rdf:datatype="&xsd;string">8.00AM</startHour>
+        <type rdf:datatype="&xsd;string">cafe</type>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <dishType rdf:datatype="&xsd;string">non-veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">northindian</cuisine>
+        <cuisine rdf:datatype="&xsd;string">southindian</cuisine>
+        <dishType rdf:datatype="&xsd;string">veg</dishType>
+    </Mumbai>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Mustard -->
+
+    <owl:Thing rdf:about="#Mustard">
+        <rdf:type rdf:resource="#Goa"/>
+        <stopHour rdf:datatype="&xsd;string">12AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">12PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >House number 78, Mae de deus vaddo, Chogm Road, Sangolda, Goa 403511</address>
+        <dishType rdf:datatype="&xsd;string">Non-veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">Northindian</cuisine>
+        <type rdf:datatype="&xsd;string">dining</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Soi_Authentic_Goan_Restaurant -->
+
+    <owl:Thing rdf:about="#Soi_Authentic_Goan_Restaurant">
+        <rdf:type rdf:resource="#Goa"/>
+        <stopHour rdf:datatype="&xsd;string">11.30PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">12.30PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >134 (8/2), Aguada - Siolim Rd, Candolim, Goa 403515</address>
+        <dishType rdf:datatype="&xsd;string">Vegetarian</dishType>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">northindian</cuisine>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Spice_Goa -->
+
+    <owl:Thing rdf:about="#Spice_Goa">
+        <rdf:type rdf:resource="#Goa"/>
+        <stopHour rdf:datatype="&xsd;string">12PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">12PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >No. 3, Satt-Adhar Complex, Opp Mumbai Goa Highway 17, Near Karaswada Junction, Mapusa, Goa 403526</address>
+        <dishType rdf:datatype="&xsd;string">Non-veg</dishType>
+        <cuisine rdf:datatype="&xsd;string">barbecue</cuisine>
+        <type rdf:datatype="&xsd;string">dining</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Terry&#39;s_Restaurant_&amp;_Pub -->
+
+    <owl:Thing rdf:about="#Terry&#39;s_Restaurant_&amp;_Pub">
+        <rdf:type rdf:resource="#Goa"/>
+        <stopHour rdf:datatype="&xsd;string">2AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">6PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Betim&#8211;Verem&#8211;Saligao Road, Betim Ferry Wharf, Panaji, Goa 403001</address>
+        <type rdf:datatype="&xsd;string">pub</type>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Thalassa -->
+
+    <owl:Thing rdf:about="#Thalassa">
+        <rdf:type rdf:resource="#Goa"/>
+        <stopHour rdf:datatype="&xsd;string">11.00PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">8.30AM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Small Vagator, Ozran, Near Nine Bar, Vagator, Goa 403509</address>
+        <dishType rdf:datatype="&xsd;string">Vegetarian</dishType>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">southindian</cuisine>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#The_village_pub -->
+
+    <Goa rdf:about="#The_village_pub">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <stopHour rdf:datatype="&xsd;string">2AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">8PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Badem junction, Siolim Rd, North Goa, Assagao, Goa 403507</address>
+        <type rdf:datatype="&xsd;string">pub</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Tito&#39;s_Pub -->
+
+    <Goa rdf:about="#Tito&#39;s_Pub">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <stopHour rdf:datatype="&xsd;string">3.30AM</stopHour>
+        <startHour rdf:datatype="&xsd;string">7PM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Baga Beach, Titos Lane, Saunta Vaddo, Calangute, Goa 403516</address>
+        <type rdf:datatype="&xsd;string">pub</type>
+    </Goa>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2010/6/Rest.owl#Yauatcha_Mumbai -->
+
+    <owl:Thing rdf:about="#Yauatcha_Mumbai">
+        <rdf:type rdf:resource="#Mumbai"/>
+        <stopHour rdf:datatype="&xsd;string">11.30PM</stopHour>
+        <startHour rdf:datatype="&xsd;string">8AM</startHour>
+        <address rdf:datatype="&xsd;string"
+            >Raheja Tower, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051</address>
+        <type rdf:datatype="&xsd;string">dining</type>
+        <cuisine rdf:datatype="&xsd;string">southindian</cuisine>
+        <dishType rdf:datatype="&xsd;string">veg</dishType>
+    </owl:Thing>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+
